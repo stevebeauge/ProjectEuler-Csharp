@@ -6,7 +6,7 @@ using Lib;
 
 namespace P014
 {
-    class Program
+    class P14
     {
         static void Main(string[] args)
         {
