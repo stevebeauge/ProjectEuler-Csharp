@@ -23,6 +23,6 @@ namespace Lib
         public static bool IsOdd(this long i)
         {
             return !i.IsEven();
-        }
+        }       
     }
 }
