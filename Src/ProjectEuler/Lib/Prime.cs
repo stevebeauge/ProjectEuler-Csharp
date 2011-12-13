@@ -14,18 +14,6 @@ namespace Lib
             479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 
             355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000 };
 
-        public static IEnumerable<long> GetPrimesFactor(this long number)
-        {
-            for (long i = 2; i <= number / 2; i++)
-            {
-                while (number % i == 0)
-                {
-                    yield return i;
-                    number /= i;
-                }
-            }
-            yield return number;
-        }
 
         public static IEnumerable<ulong> GetPrimes(ulong uBound = ulong.MaxValue)
         {
@@ -48,11 +36,10 @@ namespace Lib
                 .Any(x => value % x == 0);
         }
 
-        public static ulong FactorialSmall(this ulong n)
+        public static ulong FactorialSmall(this int n)
         {
             Contract.Requires<ArgumentOutOfRangeException>(n <= 20, "n must be less than or equals to 20 for this method to works.");
             Contract.Requires<ArgumentOutOfRangeException>(n > 0);
-
             return g_SmallFactorials[n];
         }
 
@@ -61,6 +48,7 @@ namespace Lib
         {
 
             if (n < 2) return BigInteger.One;
+            if (n <= 20) return FactorialSmall(n);
 
             BigInteger p = BigInteger.One;
             BigInteger r = BigInteger.One;
