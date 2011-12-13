@@ -1,0 +1,80 @@
+
+@media Screen, Unknown    
+{
+.print {
+	DISPLAY: none
+}
+BODY {
+	BACKGROUND-COLOR: #fff; COLOR: #000
+}
+.problem_content {
+	BACKGROUND-COLOR: #fff
+}
+#container {
+	PADDING-TOP: 60px
+}
+H1 {
+	COLOR: #666
+}
+H3 {
+	COLOR: #666
+}
+H4 {
+	COLOR: #666
+}
+H2 {
+	COLOR: #6b4e3d
+}
+A {
+	COLOR: #777
+}
+A:hover {
+	COLOR: #aaa
+}
+#message {
+	BACKGROUND-COLOR: #f9f9f9; COLOR: #ff6600
+}
+#message A {
+	COLOR: #ff6600
+}
+#footer A {
+	COLOR: #bbb
+}
+.banner {
+	COLOR: #623100
+}
+.banner SUB {
+	COLOR: #ccc
+}
+.grid TH {
+	BACKGROUND-COLOR: #eee; COLOR: #666
+}
+.grid TD {
+	BACKGROUND-COLOR: #fff
+}
+.form_box {
+	BACKGROUND-COLOR: #ffefbd
+}
+.news {
+	BACKGROUND-COLOR: #ffe
+}
+.forum_table {
+	BACKGROUND-COLOR: #fff
+}
+.forum_message {
+	COLOR: #000
+}
+.forum_info {
+	BACKGROUND-COLOR: #f7efde; COLOR: #000
+}
+.forum_quote {
+	BACKGROUND: #ffffea
+}
+.code_box {
+	BACKGROUND-COLOR: #fff
+}
+.code_click {
+	BACKGROUND-COLOR: #f5f5f5; COLOR: #444
+}
+
+}
