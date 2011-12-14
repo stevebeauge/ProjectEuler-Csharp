@@ -12,7 +12,7 @@ namespace P022
         {
             var nameScores = Properties.Resources.names.Split(
                 new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries
-                ).OrderBy(s=>s).SelectWithIndex((name, position) => Score(name, position));
+                ).OrderBy(s=>s).SelectWithPosition((name, position) => Score(name, position));
             checked
             {
                 Console.Write(nameScores.Sum());

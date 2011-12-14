@@ -51,6 +51,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P021", "P021\P021.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P022", "P022\P022.csproj", "{136CA736-D081-4569-A42F-C50EEACA8603}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P023", "P023\P023.csproj", "{3E6C2269-D952-4F33-81E6-B04342CCF64D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E88762D5-862B-4A8E-A5D8-8710A07CBAF8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -271,6 +278,16 @@ Global
 		{136CA736-D081-4569-A42F-C50EEACA8603}.Release|Mixed Platforms.Build.0 = Release|x86
 		{136CA736-D081-4569-A42F-C50EEACA8603}.Release|x86.ActiveCfg = Release|x86
 		{136CA736-D081-4569-A42F-C50EEACA8603}.Release|x86.Build.0 = Release|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Debug|x86.ActiveCfg = Debug|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Debug|x86.Build.0 = Debug|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Release|Any CPU.ActiveCfg = Release|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Release|x86.ActiveCfg = Release|x86
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -296,5 +313,6 @@ Global
 		{252C89DD-4052-4B11-88B7-A9610984E76D} = {ADB65720-A850-4FE8-93B2-358F8275FFF1}
 		{40827D5C-6BD4-4260-9B6B-2B7210EE9BF7} = {4B4F8382-F02D-4AF5-8D12-7D1E9FE24DA4}
 		{136CA736-D081-4569-A42F-C50EEACA8603} = {4B4F8382-F02D-4AF5-8D12-7D1E9FE24DA4}
+		{3E6C2269-D952-4F33-81E6-B04342CCF64D} = {4B4F8382-F02D-4AF5-8D12-7D1E9FE24DA4}
 	EndGlobalSection
 EndGlobal
