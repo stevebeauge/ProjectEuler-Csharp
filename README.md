@@ -124,7 +124,7 @@ Current status :
         </td>
         <td>
         </td>
-        <td>
+        <td>25
         </td>
         <td>
         </td>
@@ -132,9 +132,9 @@ Current status :
         </td>
         <td>
         </td>
-        <td>
+        <td>29
         </td>
-        <td>
+        <td>30
         </td>
         <td>
         </td>
