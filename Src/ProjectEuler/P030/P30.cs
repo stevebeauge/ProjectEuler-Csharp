@@ -22,7 +22,7 @@ namespace P030
             {
                 var sumOfPowers = 0;
                 var tempi = i;
-                for (int x = 0; x < power; x++)
+                while(tempi > 0)
                 {
                     sumOfPowers += (int)Math.Pow( tempi % 10, power);
                     tempi /= 10;
