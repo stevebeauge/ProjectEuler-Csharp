@@ -18,7 +18,7 @@ namespace Lib
         public static IEnumerable<ulong> GetPrimes(ulong uBound = ulong.MaxValue)
         {
             yield return 2;
-            for (ulong i = 3; i < uBound; i += 2)
+            for (ulong i = 3; i <= uBound; i += 2)
             {
                 if (IsPrime(i))
                 {
