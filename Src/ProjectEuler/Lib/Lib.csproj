@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoinChangeAlgorithm.cs" />
     <Compile Include="Euclidean.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="FrameworkUtilities.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="IEnumerableExtentions.cs" />
     <Compile Include="IntegerExtentions.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="PascalTriangle.cs" />
     <Compile Include="Prime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PyramidNode.cs" />

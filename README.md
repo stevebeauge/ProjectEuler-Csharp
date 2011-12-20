@@ -93,7 +93,7 @@ Current status :
         <td>
             14
         </td>
-        <td>
+        <td>15
         </td>
         <td>
             16
@@ -136,7 +136,7 @@ Current status :
         </td>
         <td>30
         </td>
-        <td>
+        <td>31
         </td>
         <td>
         </td>
@@ -237,9 +237,9 @@ Current status :
         </td>
         <td>
         </td>
-        <td>
+        <td>76
         </td>
-        <td>87
+        <td>
         </td>
         <td>
         </td>
@@ -264,7 +264,7 @@ Current status :
         </td>
         <td>
         </td>
-        <td>
+        <td>87
         </td>
         <td>
         </td>
