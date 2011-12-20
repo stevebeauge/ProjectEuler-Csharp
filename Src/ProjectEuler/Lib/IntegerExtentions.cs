@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics.Contracts;
 
 namespace Lib
 {
@@ -9,7 +10,7 @@ namespace Lib
     {
         public static bool IsEven(this int i)
         {
-            return i%2==0;
+            return i % 2 == 0;
         }
         public static bool IsOdd(this int i)
         {
@@ -17,7 +18,7 @@ namespace Lib
         }
         public static bool IsEven(this long i)
         {
-            return i%2==0;
+            return i % 2 == 0;
         }
 
         public static bool IsOdd(this long i)
@@ -27,6 +28,7 @@ namespace Lib
 
         public static IEnumerable<long> GetPrimesFactor(this long number)
         {
+            Contract.Requires<ArgumentOutOfRangeException>(number > 1);
             for (long i = 2; i <= number / 2; i++)
             {
                 while (number % i == 0)
@@ -35,32 +37,48 @@ namespace Lib
                     number /= i;
                 }
             }
-            yield return number;
+            if(number>1) yield return number;
         }
 
         public static IEnumerable<long> GetDivisors(this long number)
         {
-            yield return 1;
-            for (long i = 0; i < Math.Sqrt(number); i++)
+
+            //yield return 1;
+            for (long i = 1; i <= number / 2; i++)
             {
                 if (number % i == 0) yield return i;
             }
+            yield return number;
+        }
+        public static IEnumerable<long> GetReverseDivisors(this long number)
+        {
+            Contract.Requires<ArgumentOutOfRangeException>(number > 0);
+
+            yield return number;
+            for (long i = number / 2; i >= 2; i--)
+            {
+                if (number % i == 0) yield return i;
+            }
+            if (number != 1)
+                yield return 1;
         }
         public static IEnumerable<short> GetDivisors(this short number)
         {
-            yield return 1;
-            for (short i = 0; i < Math.Sqrt(number); i++)
+            Contract.Requires<ArgumentOutOfRangeException>(number > 0);
+
+            for (short i = 1; i <= number / 2; i++)
             {
                 if (number % i == 0) yield return i;
             }
+            yield return number;
         }
         public static IEnumerable<int> GetDivisors(this int number)
         {
-            yield return 1;
-            for (int i = 2; i <= number /2; i++)
+            for (int i = 1; i <= number / 2; i++)
             {
                 if (number % i == 0) yield return i;
             }
+            yield return number;
         }
     }
 }

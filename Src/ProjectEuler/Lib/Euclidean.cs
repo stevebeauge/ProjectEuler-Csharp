@@ -16,6 +16,10 @@ namespace Lib
         {
             return (a * b) / Gcd(a, b);
         }
+        public static int Lcm(int a, int b, params int[] others)
+        {
+            return others.Union(new int[] { a, b }).Aggregate((x, y) => Lcm(x, y));
+        }
         public static long Gcd(long a, long b)
         {
             if (b == 0) return a;
@@ -26,5 +30,9 @@ namespace Lib
             return (a * b) / Gcd(a, b);
         }
 
+        public static long Lcm(long a, long b, params long[] others)
+        {
+            return others.Union(new long[] { a, b }).Aggregate((x, y) => Lcm(x, y));
+        }
     }
 }
