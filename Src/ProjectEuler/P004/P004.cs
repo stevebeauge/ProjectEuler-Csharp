@@ -6,10 +6,11 @@ namespace P004
 {
     class P004
     {
+        private const int NumberOfDigits = 3;
         static void Main(string[] args)
         {
-            var r = from x in NumbersWithNDigits(3)
-                    from y in NumbersWithNDigits(3) 
+            var r = from x in NumbersWithNDigits(NumberOfDigits, (int)Math.Pow(10, NumberOfDigits - 1))
+                    from y in NumbersWithNDigits(NumberOfDigits, x + 1) 
                     let p = x*y
                     let pStr = p.ToString()
                     where pStr == new string(pStr.Reverse().ToArray())
@@ -20,12 +21,12 @@ namespace P004
             Console.ReadLine();
         }
 
-        static IEnumerable<int> NumbersWithNDigits(int n)
+        
+        static IEnumerable<int> NumbersWithNDigits(int n, int lowerBound)
         {
-            int lBound =(int) Math.Pow(10,n-1);
-            int uBound =(int) Math.Pow(10,n) -1;
+            int upperBound =(int) Math.Pow(10,n) -1;
 
-            return Enumerable.Range(lBound, uBound - lBound + 1);
+            return Enumerable.Range(lowerBound, upperBound - lowerBound + 1);
         }
     }
 }
