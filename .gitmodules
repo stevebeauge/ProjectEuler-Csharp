@@ -1,0 +1,3 @@
+[submodule "ProjectEuler-Csharp.wiki"]
+	path = ProjectEuler-Csharp.wiki
+	url = git@github.com:stevebeauge/ProjectEuler-Csharp.wiki.git
