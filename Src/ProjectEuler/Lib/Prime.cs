@@ -32,6 +32,7 @@ namespace Lib
         private static readonly Func<ulong, bool> IsPrimeInternal = new Func<ulong, bool>(
             value =>
             {
+                if (value == 1) return false;
                 var sqrt = (ulong)Math.Sqrt(value);
                 return !g_knownPrimes
                     .TakeWhile(x => x <= sqrt)

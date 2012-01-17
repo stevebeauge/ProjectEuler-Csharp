@@ -49,5 +49,16 @@ namespace Lib.Extentions
             }
         }
 
+        public static ulong Sum(this IEnumerable<ulong> source)
+        {
+            ulong result = 0;
+            foreach (var n in source)
+            {
+                result += n;
+            }
+            return result;
+        }
+
+
     }
 }

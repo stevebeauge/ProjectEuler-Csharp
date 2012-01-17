@@ -87,5 +87,10 @@ namespace Lib.Extentions
             var str2 = new string(str1.Reverse().ToArray());
             return str1 == str2;
         }
+
+        public static bool IsPrime(this ulong number)
+        {
+            return Prime.IsPrime(number);
+        }
     }
 }
