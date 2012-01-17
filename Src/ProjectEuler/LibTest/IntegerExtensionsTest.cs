@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lib.Extentions;
 
 namespace LibTest
 {
@@ -211,5 +212,19 @@ namespace LibTest
             }
         }
 
+
+        /// <summary>
+        ///A test for IsPalindrome
+        ///</summary>
+        [TestMethod()]
+        public void IsPalindromeBase10Test()
+        {
+            Assert.IsTrue(101.IsPalindrome());
+            Assert.IsFalse(45.IsPalindrome());
+
+            Assert.IsFalse(455.IsPalindrome());
+            Assert.IsTrue(455.IsPalindrome(2));
+            Assert.IsFalse(4355.IsPalindrome(2));
+        }
     }
 }

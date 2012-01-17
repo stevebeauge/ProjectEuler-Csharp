@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lib.Extentions;
 
 namespace P004
 {
@@ -12,8 +13,7 @@ namespace P004
             var r = from x in NumbersWithNDigits(NumberOfDigits, (int)Math.Pow(10, NumberOfDigits - 1))
                     from y in NumbersWithNDigits(NumberOfDigits, x + 1) 
                     let p = x*y
-                    let pStr = p.ToString()
-                    where pStr == new string(pStr.Reverse().ToArray())
+                    where p.IsPalindrome()
                     select new { x,y, p };
 
             Console.WriteLine(r.Max(s=>s.p));

@@ -72,9 +72,10 @@
     <Compile Include="Fibonacci.cs" />
     <Compile Include="FrameworkUtilities.cs" />
     <Compile Include="Grid2d.cs" />
-    <Compile Include="IEnumerableExtentions.cs" />
-    <Compile Include="IntegerExtentions.cs" />
+    <Compile Include="Extentions\IEnumerableExtentions.cs" />
+    <Compile Include="Extentions\IntegerExtentions.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="Extentions\FuncExtentions.cs" />
     <Compile Include="PascalTriangle.cs" />
     <Compile Include="Prime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

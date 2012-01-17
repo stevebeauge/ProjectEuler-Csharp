@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Diagnostics.Contracts;
 using System.Numerics;
+using Lib.Extentions;
 
 namespace Lib
 {
@@ -28,12 +29,18 @@ namespace Lib
             }
         }
 
-        private static bool IsPrime(ulong value)
+        private static readonly Func<ulong, bool> IsPrimeInternal = new Func<ulong, bool>(
+            value =>
+            {
+                var sqrt = (ulong)Math.Sqrt(value);
+                return !g_knownPrimes
+                    .TakeWhile(x => x <= sqrt)
+                    .Any(x => value % x == 0);
+            }).Memoize();
+
+        public static bool IsPrime(ulong value)
         {
-            var sqrt = (ulong)Math.Sqrt(value);
-            return !g_knownPrimes
-                .TakeWhile(x => x <= sqrt)
-                .Any(x => value % x == 0);
+            return IsPrimeInternal(value);
         }
 
         public static ulong FactorialSmall(this int n)

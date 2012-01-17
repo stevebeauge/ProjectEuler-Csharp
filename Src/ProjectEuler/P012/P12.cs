@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Lib;
+using Lib.Extentions;
 
 namespace P012
 {

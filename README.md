@@ -66,7 +66,7 @@ Current status :
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>35</td>
         <td></td>
         <td></td>
         <td></td>

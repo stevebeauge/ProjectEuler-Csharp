@@ -80,5 +80,12 @@ namespace Lib.Extentions
             }
             yield return number;
         }
+
+        public static bool IsPalindrome(this int number, int @base = 10)
+        {
+            var str1 = Convert.ToString(number, @base);
+            var str2 = new string(str1.Reverse().ToArray());
+            return str1 == str2;
+        }
     }
 }
