@@ -63,7 +63,7 @@ Current status :
         <td>29</td>
         <td>30</td>
         <td>31</td>
-        <td></td>
+        <td>32</td>
         <td></td>
         <td>34</td>
         <td>35</td>
