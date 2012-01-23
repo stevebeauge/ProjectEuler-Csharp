@@ -70,7 +70,7 @@ Current status :
         <td>36</td>
         <td>37</td>
         <td></td>
-        <td></td>
+        <td>39</td>
         <td></td>
     </tr>
     <tr>
