@@ -13,9 +13,9 @@ namespace P087
         static void Main(string[] args)
         {
 
-            var primesPow2 = Prime.GetPrimes((ulong)Math.Pow(uBound, 1 / 2D)).ToArray();
-            var primesPow3 = Prime.GetPrimes((ulong)Math.Pow(uBound, 1 / 3D)).ToArray();
-            var primesPow4 = Prime.GetPrimes((ulong)Math.Pow(uBound, 1 / 4D)).ToArray();
+            var primesPow2 = Primes.GetPrimes((ulong)Math.Pow(uBound, 1 / 2D)).ToArray();
+            var primesPow3 = Primes.GetPrimes((ulong)Math.Pow(uBound, 1 / 3D)).ToArray();
+            var primesPow4 = Primes.GetPrimes((ulong)Math.Pow(uBound, 1 / 4D)).ToArray();
             var matching = new HashSet<ulong>();
             for (int pow4idx = 0; pow4idx < primesPow4.Length; pow4idx++)
             {

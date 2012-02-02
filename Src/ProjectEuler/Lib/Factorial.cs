@@ -7,42 +7,12 @@ using Lib.Extentions;
 
 namespace Lib
 {
-    public static class Prime
+    public static class Factorial
     {
-        private static List<ulong> g_knownPrimes = new List<ulong>() { 2, 3 }; // Cache for know primes
         private static ulong[] g_SmallFactorials = new ulong[]  {
             1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 
             479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 
             355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000 };
-
-
-        public static IEnumerable<ulong> GetPrimes(ulong uBound = ulong.MaxValue)
-        {
-            yield return 2;
-            for (ulong i = 3; i <= uBound; i += 2)
-            {
-                if (IsPrime(i))
-                {
-                    yield return i;
-                    g_knownPrimes.Add(i);
-                }
-            }
-        }
-
-        private static readonly Func<ulong, bool> IsPrimeInternal = new Func<ulong, bool>(
-            value =>
-            {
-                if (value == 1) return false;
-                var sqrt = (ulong)Math.Sqrt(value);
-                return !g_knownPrimes
-                    .TakeWhile(x => x <= sqrt)
-                    .Any(x => value % x == 0);
-            }).Memoize();
-
-        public static bool IsPrime(ulong value)
-        {
-            return IsPrimeInternal(value);
-        }
 
         public static ulong FactorialSmall(this int n)
         {
@@ -52,7 +22,7 @@ namespace Lib
         }
 
         // Taken from https://github.com/PeterLuschny/Fast-Factorial-Functions/blob/master/SilverFactorial64/Sharith/Factorial/FactorialSplit.cs
-        public static BigInteger Factorial(this int n)
+        public static BigInteger FactorialBig(this int n)
         {
 
             if (n < 2) return BigInteger.One;

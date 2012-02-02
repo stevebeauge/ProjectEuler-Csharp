@@ -12,7 +12,7 @@ namespace P035
         static void Main()
         {
 
-            var primes = Prime.GetPrimes(999999);
+            var primes = Primes.GetPrimes(999999);
             var circularPrimes = primes.Where(u => IsCircular(u));
 
             foreach (var item in circularPrimes)
@@ -29,7 +29,7 @@ namespace P035
         {
             return number.ToString().GetRotations().Select(
                 s => ulong.Parse(new string(s.ToArray()))
-                ).All(u=>Prime.IsPrime(u));
+                ).All(u=>u.IsPrime());
         }
     }
 }

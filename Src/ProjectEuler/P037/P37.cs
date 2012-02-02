@@ -11,7 +11,7 @@ namespace P037
     {
         static void Main()
         {
-            var matching = from n in Prime.GetPrimes().SkipWhile(x=>x<23)
+            var matching = from n in Primes.GetPrimes().SkipWhile(x=>x<23)
                            where n%10 != 1
                            where RightToLeftAreAllPrimes(n)
                            where LeftToRightAreAllPrimes(n)

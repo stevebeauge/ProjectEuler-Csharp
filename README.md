@@ -75,7 +75,7 @@ Current status :
     </tr>
     <tr>
         <td>041-060</td>
-        <td></td>
+        <td>41</td>
         <td></td>
         <td></td>
         <td></td>

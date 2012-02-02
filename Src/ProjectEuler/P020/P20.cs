@@ -11,7 +11,7 @@ namespace P020
         static void Main(string[] args)
         {
 
-            var result = 100.Factorial().ToString().Select(c => c - '0').Sum();
+            var result = 100.FactorialBig().ToString().Select(c => c - '0').Sum();
 
             Console.WriteLine(result);
 

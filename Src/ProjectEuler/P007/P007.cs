@@ -11,7 +11,7 @@ namespace P7
     {
         static void Main(string[] args)
         {
-            var i = Prime.GetPrimes().Skip(10000).First();
+            var i = Primes.GetPrimes().Skip(10000).First();
 
             Debug.Assert(i == 104743);
             Console.WriteLine(i);

@@ -88,9 +88,14 @@ namespace Lib.Extentions
             return str1 == str2;
         }
 
-        public static bool IsPrime(this ulong number)
+        public static IEnumerable<byte> GetDigits(this ulong number)
         {
-            return Prime.IsPrime(number);
+            Contract.Requires<ArgumentOutOfRangeException>(number > 0);
+            do
+            {
+                yield return (byte) (number % 10);
+                number /= 10;
+            } while (number > 0);
         }
     }
 }
