@@ -83,6 +83,8 @@ namespace Lib.Extentions
 
         public static bool IsPalindrome(this int number, int @base = 10)
         {
+            Contract.Requires<ArgumentOutOfRangeException>(@base == 2 || @base == 8 || @base == 10 || @base == 16);
+
             var str1 = Convert.ToString(number, @base);
             var str2 = new string(str1.Reverse().ToArray());
             return str1 == str2;

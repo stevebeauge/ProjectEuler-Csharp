@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Lib.Extentions;
 
-namespace LibTest
+namespace Lib.Tests
 {
 
 

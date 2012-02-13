@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Diagnostics.Contracts;
 
 namespace Lib
 {
@@ -12,6 +13,8 @@ namespace Lib
 
         public static Grid2d Parse(string content)
         {
+            Contract.Requires<ArgumentNullException>(content != null);
+
             var lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             var values = lines.Select(l=>l.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)).ToList();
@@ -37,7 +40,12 @@ namespace Lib
 
         public int this[int x, int y]
         {
-            get { return m_Values[x, y]; }
+            get {
+                Contract.Requires<ArgumentOutOfRangeException>(x > 0 && x < Width, "X must be between 0 and Width");
+                Contract.Requires<ArgumentOutOfRangeException>(y > 0 && x < Height, "Y must be between 0 and Height");
+
+                return m_Values[x, y]; 
+            }
         }
     }
 }

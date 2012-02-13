@@ -10,9 +10,9 @@ namespace P076
     {
         static void Main(string[] args)
         {
-            long[] coins= new long[99];
+            uint[] coins= new uint[99];
 
-            for (int i = 0; i < coins.Length; i++)
+            for (uint i = 0; i < coins.Length; i++)
             {
                 coins[i] = i + 1;
             }

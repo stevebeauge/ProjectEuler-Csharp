@@ -1,19 +1,18 @@
-﻿using Lib.Extentions;
+﻿using Lib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace LibTest
+namespace Lib.Tests
 {
     
     
     /// <summary>
-    ///This is a test class for IEnumerableExtentionsTest and is intended
-    ///to contain all IEnumerableExtentionsTest Unit Tests
+    ///This is a test class for PermutationTest and is intended
+    ///to contain all PermutationTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class IEnumerableExtentionsTest
+    public class PermutationTest
     {
 
 
@@ -67,49 +66,28 @@ namespace LibTest
 
 
         [TestMethod()]
-        [DeploymentItem("Lib.dll")]
-        public void GetPermutationsTest()
+        public void PermutationsTest()
         {
             var source = "abc";
 
-            var actual = source.GetPermutations();
+            var actual = Permutation.Enumerate(source.ToCharArray());
 
             var @enum = actual.GetEnumerator();
 
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "abc");
+            Assert.AreEqual(new string(@enum.Current), "abc");
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "acb");
+            Assert.AreEqual(new string(@enum.Current), "acb");
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "bac");
+            Assert.AreEqual(new string(@enum.Current), "bac");
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "bca");
+            Assert.AreEqual(new string(@enum.Current), "bca");
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "cab");
+            Assert.AreEqual(new string(@enum.Current), "cba");
             Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "cba");
+            Assert.AreEqual(new string(@enum.Current), "cab");
             Assert.IsFalse(@enum.MoveNext());
 
-
-        }
-
-
-        [TestMethod()]
-        public void GetRotationsTest()
-        {
-            var source = "abc";
-
-            var actual = source.GetRotations();
-
-            var @enum = actual.GetEnumerator();
-
-            Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "abc");
-            Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "bca");
-            Assert.IsTrue(@enum.MoveNext());
-            Assert.AreEqual(new string(@enum.Current.ToArray()), "cab");
-            Assert.IsFalse(@enum.MoveNext());
         }
     }
 }

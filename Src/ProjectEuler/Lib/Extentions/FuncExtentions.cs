@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Concurrent;
 using System.Threading;
+using System.Diagnostics.Contracts;
 
 namespace Lib.Extentions
 {
@@ -11,6 +12,7 @@ namespace Lib.Extentions
     {
         public static Func<A, R> Memoize<A, R>(this Func<A, R> f)
         {
+            Contract.Requires<ArgumentNullException>(f != null);
             var map = new ConcurrentDictionary<A, Lazy<R>>();
             return a =>
             {

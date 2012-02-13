@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics.Contracts;
 
 namespace Lib
 {
@@ -17,6 +18,8 @@ namespace Lib
 
         public static PyramidNode Load(string content)
         {
+            Contract.Requires<ArgumentNullException>(content != null);
+
             var lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             var values = lines.Select(l => l.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(nb => int.Parse(nb)));
